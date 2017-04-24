@@ -3,17 +3,18 @@
 android:orientation="horizontal"
 android:layout_width="fill_parent"
 android:layout_height="match_parent"
-android:onClick="getFood">
+android:onClick="getFood"
+    android:weightSum="1">
 
-<TextView
-    android:id="@+id/day"
-    android:layout_width="60dp"
-    android:layout_height="wrap_content"
-    android:textSize="50dp"
-    android:textAlignment="center"
-    android:layout_marginRight="20dp"
-    android:textColor="#732f2f"
-    />
+    <TextView
+        android:id="@+id/day"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:textSize="50dp"
+        android:textAlignment="center"
+        android:layout_marginRight="20dp"
+        android:textColor="#732f2f"
+        />
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -30,31 +31,6 @@ android:onClick="getFood">
             android:layout_height="wrap_content"
             android:id="@+id/dish"/>
     </LinearLayout>
-
-
-       <EditText
-    android:id="@+id/new_post"
-    android:hint="@string/new_post"
-    android:textSize="30dp"
-    android:layout_marginTop="50dp"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"/>
-
-    <Button
-    android:id="@+id/save_button"
-    android:text="@string/save_text"
-    android:layout_marginTop="25dp"
-    android:layout_marginLeft="25dp"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:onClick="onSaveButtonClick"/>
-
-    <TextView
-    android:id="@+id/saved_text"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:textSize="50dp"
-    android:text="@string/saved_text"/>
 
 
 </LinearLayout>

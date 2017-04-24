@@ -22,4 +22,9 @@ public class FoodDay {
     public Integer getDay() {
         return this.day;
     }
+
+
+
+
+
 }
