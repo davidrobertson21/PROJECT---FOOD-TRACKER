@@ -17,7 +17,9 @@ import android.widget.Toast;
  */
 
 public class MenuActivity extends AppCompatActivity {
-    EditText textToSave;
+    EditText textToSaveDish;
+    EditText textToSaveMealTime;
+    EditText textToSaveDate;
     Button saveButton;
     TextView savedText;
 
@@ -26,10 +28,9 @@ public class MenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.new_post);
 
-        textToSave = (EditText) findViewById(R.id.new_post_dish);
-        textToSave = (EditText) findViewById(R.id.new_post_mealTime);
-        textToSave = (EditText) findViewById(R.id.new_post_date);
-
+        textToSaveDish = (EditText) findViewById(R.id.new_post_dish);
+        textToSaveMealTime = (EditText) findViewById(R.id.new_post_mealTime);
+        textToSaveDate = (EditText) findViewById(R.id.new_post_date);
         saveButton = (Button) findViewById(R.id.save_button);
         savedText = (TextView) findViewById(R.id.saved_post);
         savedText.setVisibility(View.INVISIBLE);
@@ -37,8 +38,8 @@ public class MenuActivity extends AppCompatActivity {
         String returnedText = SavedTextPreferences.getStoredText(this);
 
         if (returnedText != null) {
-            saveButton.setVisibility(View.INVISIBLE);
-            textToSave.setVisibility(View.INVISIBLE);
+//            saveButton.setVisibility(View.INVISIBLE);
+//            textToSave.setVisibility(View.INVISIBLE);
             savedText.setVisibility(View.VISIBLE);
             savedText.setText(returnedText);
 
@@ -71,9 +72,9 @@ public class MenuActivity extends AppCompatActivity {
         String stringToSave = textToSave.getText().toString();
         Log.d("PersistenceExample:", "Save Button Clicked!");
         Log.d("PersistenceExample:", "The text to save is: '" + textToSave + "'");
-        saveButton.setVisibility(View.INVISIBLE);
-        textToSave.setVisibility(View.INVISIBLE);
-        savedText.setVisibility(View.VISIBLE);
+//        saveButton.setVisibility(View.INVISIBLE);
+//        textToSave.setVisibility(View.INVISIBLE);
+//        savedText.setVisibility(View.VISIBLE);
         savedText.setText(stringToSave);
 
         SavedTextPreferences.setStoredText(this, stringToSave);

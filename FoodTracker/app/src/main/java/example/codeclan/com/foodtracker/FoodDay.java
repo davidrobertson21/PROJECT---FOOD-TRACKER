@@ -15,6 +15,8 @@ public class FoodDay {
         this.day = day;
     }
 
+
+
     public ArrayList<Food> getFoods() {
         return this.foods;
     }

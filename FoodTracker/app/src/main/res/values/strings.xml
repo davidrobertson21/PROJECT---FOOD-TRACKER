@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">FoodTracker</string>
-    <string name="menu">Menu</string>
+    <string name="menu">New Post</string>
     <string name="new_post_dish">Dish</string>
     <string name="new_post_mealTime">Breakfast/Lunch/Dinner/Snack</string>
     <string name="new_post_date">Date + Time</string>
