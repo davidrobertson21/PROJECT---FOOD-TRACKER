@@ -24,10 +24,10 @@ public class MenuActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.layout);
+        setContentView(R.layout.new_post);
 
         textToSave = (EditText) findViewById(R.id.new_post_dish);
-        textToSave = (EditText) findViewById(R.id.new_post_mealTime;
+        textToSave = (EditText) findViewById(R.id.new_post_mealTime);
         textToSave = (EditText) findViewById(R.id.new_post_date);
 
         saveButton = (Button) findViewById(R.id.save_button);
