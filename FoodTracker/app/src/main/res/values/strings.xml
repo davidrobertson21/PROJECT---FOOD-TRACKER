@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">FoodTracker</string>
+    <string name="menu">Menu</string>
+    <string name="new_post">New Post</string>
+    <string name="save_text">Save</string>
+    <string name="saved_text">Saved Text</string>
+</resources>
