@@ -6,11 +6,11 @@ package example.codeclan.com.foodtracker;
 
 public class Food {
 
-    private int day;
-    private String mealTime;
+    private FoodDayEnum day;
+    private FoodMealtimeEnum mealTime;
     private String dish;
 
-    public Food(Integer day, String mealTime, String dish) {
+    public Food(Integer day, FoodMealtimeEnum mealTime, FoodDayEnum dish) {
         this.day = day;
         this.mealTime = mealTime;
         this.dish = dish;
