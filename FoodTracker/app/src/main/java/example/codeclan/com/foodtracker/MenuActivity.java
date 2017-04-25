@@ -73,7 +73,7 @@ public class MenuActivity extends AppCompatActivity {
         String stringToSave = textToSaveMealTime.getText().toString();
         String stringToSave = textToSaveDate.getText().toString();
         Log.d("PersistenceExample:", "Save Button Clicked!");
-        Log.d("PersistenceExample:", "The text to save is: '" + textToSave + "'");
+        Log.d("PersistenceExample:", "The dish to save is: '" + textToSaveDish + "'");
 //        saveButton.setVisibility(View.INVISIBLE);
 //        textToSave.setVisibility(View.INVISIBLE);
 //        savedText.setVisibility(View.VISIBLE);

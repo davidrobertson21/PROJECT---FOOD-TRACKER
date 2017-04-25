@@ -20,14 +20,12 @@ public class Food {
     public Integer getDay() {
         return day;
     }
-
     public String getMealTime() {
         return mealTime;
     }
-
     public String getDish() { return dish;  }
 
-    
+
 
 }
 
