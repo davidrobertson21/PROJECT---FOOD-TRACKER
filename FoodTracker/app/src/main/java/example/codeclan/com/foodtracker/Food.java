@@ -10,17 +10,17 @@ public class Food {
     private FoodMealtimeEnum mealTime;
     private String dish;
 
-    public Food(Integer day, FoodMealtimeEnum mealTime, FoodDayEnum dish) {
+    public Food(FoodDayEnum day, FoodMealtimeEnum mealTime, String dish) {
         this.day = day;
         this.mealTime = mealTime;
         this.dish = dish;
 
 }
 
-    public Integer getDay() {
+    public FoodDayEnum getDay() {
         return day;
     }
-    public String getMealTime() {
+    public FoodMealtimeEnum getMealTime() {
         return mealTime;
     }
     public String getDish() { return dish;  }
