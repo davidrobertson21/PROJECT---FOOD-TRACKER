@@ -3,5 +3,10 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="white">#8f3838</color>
+    <color name="white">#125261</color>
+    <color name="foodlist">#387e8f</color>
+    <color name="mainpage">#387e8f</color>
+    <!--<color name="foodlist">#387e8f</color>-->
+
+
 </resources>

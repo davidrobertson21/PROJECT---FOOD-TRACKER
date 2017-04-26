@@ -20,7 +20,6 @@
         <activity android:name=".FoodListActivity">
 
         </activity>
-        <activity android:name=".FoodClick"></activity>
     </application>
 
 </manifest>

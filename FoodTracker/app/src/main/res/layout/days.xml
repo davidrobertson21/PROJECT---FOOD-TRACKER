@@ -4,7 +4,9 @@ android:orientation="vertical"
 android:layout_width="fill_parent"
 android:layout_height="match_parent"
 android:onClick="getFood"
-    android:weightSum="1">
+    android:weightSum="1"
+    android:background="@color/mainpage"
+    >
 
    <ListView
        android:id="@+id/days_list"
