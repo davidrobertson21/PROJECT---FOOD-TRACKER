@@ -15,24 +15,25 @@ android:onClick="getFood"
         android:height="80dp"
         android:textSize="30dp"
         android:textColor="#d0e1d0"
-        android:layout_height="55dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
     <Button
         android:id="@+id/delete_button"
         android:layout_width="80dp"
-        android:layout_height="wrap_content"
+        android:layout_height="fill_parent"
         android:text="DELETE"
         android:textColor="#a70031"
         android:onClick="deleteFood"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        />
 
     <TextView
         android:layout_width="200dp"
-        android:layout_height="56dp"
+        android:layout_height="wrap_content"
         android:id="@+id/mealTime"
         android:textSize="30dp"
         android:textColor="#f1644e"

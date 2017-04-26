@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/mainpage"
+    >
 
     <TextView
         android:id="@+id/saved_post"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="50dp"
+        android:textColor="#f1644e"
         android:text="@string/saved_post"
         android:layout_below="@+id/save_button"
         android:layout_centerHorizontal="true"
@@ -30,6 +33,7 @@
         android:background="@android:drawable/btn_dropdown"
         android:spinnerMode="dropdown"
         android:textSize="30dp"
+        android:textColor="#ffffff"
         android:layout_below="@+id/new_post_mealTime"
         android:layout_margin="40dp"
         />
@@ -38,6 +42,7 @@
         android:id="@+id/new_post_dish"
         android:hint="@string/new_post_dish"
         android:textSize="30dp"
+        android:textColor="#f1644e"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:layout_alignParentTop="true"
@@ -48,6 +53,7 @@
         android:id="@+id/new_post_mealTime"
         android:hint="@string/new_post_mealTime"
         android:textSize="30dp"
+        android:textColor="#ffffff"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:layout_below="@+id/new_post_dish"
@@ -64,6 +70,7 @@
         android:layout_height="wrap_content"
         android:onClick="onSaveButtonClick"
         android:layout_weight="4.90"
+        android:textColor="#f1644e"
         android:layout_marginTop="84dp"
         android:layout_below="@+id/new_post_date"
         android:layout_centerHorizontal="true" />

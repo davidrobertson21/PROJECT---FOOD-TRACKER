@@ -12,6 +12,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -99,6 +100,8 @@ import java.util.ArrayList;
             }
             foodList.remove(foodToDelete);
             SavedTextPreferences.storeFoodList(this, foodList);
+
+            Toast.makeText(FoodListActivity.this, R.string.delete, Toast.LENGTH_SHORT).show();
 
             Intent intent = new Intent(this, DaysActivity.class);
             startActivity(intent);

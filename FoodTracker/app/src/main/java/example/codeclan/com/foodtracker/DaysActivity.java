@@ -48,6 +48,14 @@ import java.util.Arrays;
         return true;
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        Intent intent = new Intent(this, MenuActivity.class);
+
+        startActivity(intent);
+        return true;
+    }
+
     public void clickedDay(View view) {
         Intent intent = new Intent(this, FoodListActivity.class);
         intent.putExtra("DaySelect", view.getTag().toString());

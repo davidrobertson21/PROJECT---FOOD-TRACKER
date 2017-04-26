@@ -11,6 +11,8 @@ android:onClick="getFood"
    <ListView
        android:id="@+id/days_list"
        android:layout_width="match_parent"
-       android:layout_height="wrap_content"></ListView>
+       android:layout_height="wrap_content"
+       android:textColor="#f1644e"
+       android:textAlignment="center"></ListView>
 
 </LinearLayout>
