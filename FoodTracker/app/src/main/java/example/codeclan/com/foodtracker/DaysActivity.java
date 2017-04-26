@@ -41,6 +41,13 @@ import java.util.Arrays;
 
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.activity_main, menu);
+        return true;
+    }
+
     public void clickedDay(View view) {
         Intent intent = new Intent(this, FoodListActivity.class);
         intent.putExtra("DaySelect", view.getTag().toString());

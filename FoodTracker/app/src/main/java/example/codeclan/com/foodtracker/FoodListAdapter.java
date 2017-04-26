@@ -30,13 +30,13 @@ public class FoodListAdapter extends ArrayAdapter<Food> {
 
         Food currentFood = getItem(position);
 
-        TextView day = (TextView) listItemView.findViewById(R.id.day);
+        TextView day = (TextView) listItemView.findViewById(R.id.mealTime);
         day.setText(currentFood.getMealTime().toString());
 
 //        TextView mealTime = (TextView) listItemView.findViewById(R.id.mealTime);
 //        mealTime.setText(currentFood.getMealTime().toString());
 
-        TextView dish = (TextView) listItemView.findViewById(R.id.mealTime);
+        TextView dish = (TextView) listItemView.findViewById(R.id.dish);
         dish.setText(currentFood.getDish().toString());
 
         Button deleteButton = (Button) listItemView.findViewById(R.id.delete_button);
