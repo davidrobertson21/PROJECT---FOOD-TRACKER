@@ -102,10 +102,10 @@ public class MenuActivity extends AppCompatActivity {
 
         SavedTextPreferences.storeFood(this, food);
 
-
         //goback
-        Intent intent = new Intent(MenuActivity.this,FoodListActivity.class);
-        startActivity(intent);
+        this.finish();
+//        Intent intent = new Intent(MenuActivity.this,FoodListActivity.class);
+//        startActivity(intent);
 
 
     }

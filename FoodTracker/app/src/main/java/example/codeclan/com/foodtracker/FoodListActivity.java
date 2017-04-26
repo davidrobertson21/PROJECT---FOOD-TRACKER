@@ -21,12 +21,18 @@ import java.util.ArrayList;
 
     public class FoodListActivity extends AppCompatActivity {
 
+        private FoodDayEnum selectedDay;
+
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.food_list);
 
-//            FoodList foodList = new FoodList();
+            String selected = getIntent().getExtras().getString("DaySelect");
+
+            selectedDay = Enum.valueOf(FoodDayEnum.class, selected);
+
+//           FoodList foodList = new FoodList();
 //            ArrayList<Food> list = foodList.getList();
 
 
@@ -48,8 +54,19 @@ import java.util.ArrayList;
         public void onResume() {
             super.onResume();
 
+
+
             ArrayList<Food> list = SavedTextPreferences.getAllFoods(this);
-            FoodListAdapter foodListAdapter = new FoodListAdapter(this, list);
+
+            ArrayList<Food> selectedFood = new ArrayList<>();
+
+            for(Food food : list) {
+                if(food.getDay() == selectedDay) {
+                    selectedFood.add(food);
+                }
+            }
+
+            FoodListAdapter foodListAdapter = new FoodListAdapter(this, selectedFood);
 
             ListView listView = (ListView)findViewById(R.id.list);
             listView.setAdapter(foodListAdapter);
@@ -71,6 +88,18 @@ import java.util.ArrayList;
             return true;
         }
 
+//    @Override
+//    protected void onCreate(Bundle savedInstanceState) {
+//        super.onCreate(savedInstanceState);
+//        setContentView(R.layout.activity_my);
+//        ContactAdapter ca = new ContactAdapter(createContact(20), this);
+//        ListView lv = (ListView) findViewById(R.id.contact_list);
+//        lv.setAdapter(ca);
+    }
+
+
+
+
 //    SharedPreferences sharedPref = getSharedPreferences(getString(R.string.preference_file_key), Context.MODE_PRIVATE);
 //    String  = sharedPref.getString("MyFavourites", new ArrayList<Food>().toString());
 //    Log.d("Favourites String", FoodListActivity);
@@ -84,7 +113,6 @@ import java.util.ArrayList;
 //    myFavourites.add(newFavourite);
 //    Log.d("myFavourites", myFavourites);
 
-
-    }
+//}
 
 
