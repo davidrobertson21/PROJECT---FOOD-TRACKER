@@ -88,6 +88,21 @@ import java.util.ArrayList;
             return true;
         }
 
+        public void deleteFood(View button) {
+            Food foundFood = (Food) button.getTag();
+            Food foodToDelete = null;
+            ArrayList<Food> foodList = SavedTextPreferences.getAllFoods(this);
+            for (Food food : foodList){
+                if(food.getDish().equals(foundFood.getDish()) && food.getMealTime().equals(foundFood.getMealTime())){
+                    foodToDelete = food;
+                }
+            }
+            foodList.remove(foodToDelete);
+            SavedTextPreferences.storeFoodList(this, foodList);
+
+            Intent intent = new Intent(this, DaysActivity.class);
+            startActivity(intent);
+        }
 //    @Override
 //    protected void onCreate(Bundle savedInstanceState) {
 //        super.onCreate(savedInstanceState);

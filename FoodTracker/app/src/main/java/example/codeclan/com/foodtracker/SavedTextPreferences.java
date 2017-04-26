@@ -69,5 +69,18 @@ public class SavedTextPreferences {
 
         return allFoods;
     }
+
+    public static void storeFoodList(Context context, ArrayList<Food> foodList) {
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
+
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+
+        Gson gson = new Gson();
+
+        String foodAsString = gson.toJson(foodList);
+
+        editor.putString("Food", foodAsString);
+        editor.apply();
+    }
 }
 

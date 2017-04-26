@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
 android:orientation="horizontal"
 android:layout_width="fill_parent"
 android:layout_height="match_parent"
@@ -9,27 +10,42 @@ android:onClick="getFood"
     <TextView
         android:id="@+id/day"
         android:layout_width="150dp"
-        android:height="150dp"
+        android:height="50dp"
         android:textSize="20dp"
         android:textAlignment="center"
         android:textColor="#732f2f"
         android:layout_height="55dp" />
 
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="56dp"
+        android:id="@+id/mealTime"
+        android:layout_alignBottom="@+id/day"
+        android:layout_toRightOf="@+id/day" />
 
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/mealTime"/>
+    <Button
+        android:id="@+id/delete_button"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="34dp"
+        android:layout_marginEnd="34dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:text="DELETE"
+        android:onClick="deleteFood"/>
 
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/dish"/>
-    </LinearLayout>
+    <!--<LinearLayout-->
+        <!--android:layout_width="50dp"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:layout_marginLeft="50dp"-->
+        <!--android:layout_marginStart="50dp"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_toRightOf="@+id/button4"-->
+        <!--android:layout_toEndOf="@+id/button4">-->
+
+    <!--</LinearLayout>-->
 
 
-</LinearLayout>
+</RelativeLayout>
