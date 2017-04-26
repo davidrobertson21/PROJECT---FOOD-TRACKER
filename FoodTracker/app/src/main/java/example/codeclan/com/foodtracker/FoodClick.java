@@ -10,3 +10,5 @@ public class FoodClick extends AppCompatActivity {
         super.onCreate(savedInstanceState);
     }
 }
+
+//THIS IS THE VIEW THAT WILL SHOW EACH DAYS FOOD INTAKE

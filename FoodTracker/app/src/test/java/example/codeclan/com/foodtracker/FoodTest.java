@@ -15,7 +15,7 @@ public class FoodTest {
 
     @Before
     public void before() {
-        food = new Food(1, "Breakfast", "Cheerios");
+        food = new Food(FoodDayEnum.MONDAY, FoodMealtimeEnum.BREAKFAST, "Cheerios");
     }
 
     @Test

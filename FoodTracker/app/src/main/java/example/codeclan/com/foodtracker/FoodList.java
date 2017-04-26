@@ -12,15 +12,15 @@ public class FoodList {
 
     public FoodList() {
         list = new ArrayList<Food>();
-        list.add(new Food(1, "Breakfast", "Muesli"));
-        list.add(new Food(1, "Lunch", "Sandwich"));
-        list.add(new Food(1, "Dinner", "Steak & Chips"));
-        list.add(new Food(1, "Snack", "Crisps"));
+        list.add(new Food(FoodDayEnum.MONDAY, FoodMealtimeEnum.BREAKFAST, "Muesli"));
+        list.add(new Food(FoodDayEnum.MONDAY, FoodMealtimeEnum.LUNCH, "Sandwich"));
+        list.add(new Food(FoodDayEnum.MONDAY, FoodMealtimeEnum.DINNER, "Steak & Chips"));
+        list.add(new Food(FoodDayEnum.MONDAY, FoodMealtimeEnum.SNACK, "Crisps"));
 
-        list.add(new Food(2, "Breakfast", "Bacon & Eggs"));
-        list.add(new Food(2, "Lunch", "Lasagna"));
-        list.add(new Food(2, "Dinner", "Fish & Chips"));
-        list.add(new Food(2, "Snack", "Nuts"));
+        list.add(new Food(FoodDayEnum.TUESDAY, FoodMealtimeEnum.BREAKFAST, "Bacon & Eggs"));
+        list.add(new Food(FoodDayEnum.TUESDAY, FoodMealtimeEnum.LUNCH, "Lasagna"));
+        list.add(new Food(FoodDayEnum.TUESDAY, FoodMealtimeEnum.DINNER, "Fish & Chips"));
+        list.add(new Food(FoodDayEnum.TUESDAY, FoodMealtimeEnum.SNACK, "Nuts"));
 
     }
 

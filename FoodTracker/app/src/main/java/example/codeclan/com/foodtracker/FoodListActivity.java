@@ -1,6 +1,9 @@
 package example.codeclan.com.foodtracker;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.graphics.Movie;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -23,20 +26,33 @@ import java.util.ArrayList;
             super.onCreate(savedInstanceState);
             setContentView(R.layout.food_list);
 
-            FoodList foodList = new FoodList();
-            ArrayList<Food> list = foodList.getList();
+//            FoodList foodList = new FoodList();
+//            ArrayList<Food> list = foodList.getList();
 
-            FoodListAdapter foodListAdapter = new FoodListAdapter(this, list);
 
-            ListView listView = (ListView)findViewById(R.id.list);
-            listView.setAdapter(foodListAdapter);
+
 
         }
 
         public void getFood(View listItem){
             Food food = (Food) listItem.getTag();
-            Log.d("Meal ", food.getMealTime() + "Dish " + food.getDish());
+            Log.d("Meal ", food.getMealTime() + "Dish " + food.getDish() + "Date " + food.getDay());
+            Intent intent = new Intent(this, FoodListActivity.class);
+            intent.putExtra("Food", food);
 
+            startActivity(intent);
+
+        }
+
+        @Override
+        public void onResume() {
+            super.onResume();
+
+            ArrayList<Food> list = SavedTextPreferences.getAllFoods(this);
+            FoodListAdapter foodListAdapter = new FoodListAdapter(this, list);
+
+            ListView listView = (ListView)findViewById(R.id.list);
+            listView.setAdapter(foodListAdapter);
         }
 
         @Override
@@ -54,6 +70,21 @@ import java.util.ArrayList;
             startActivity(intent);
             return true;
         }
+
+//    SharedPreferences sharedPref = getSharedPreferences(getString(R.string.preference_file_key), Context.MODE_PRIVATE);
+//    String  = sharedPref.getString("MyFavourites", new ArrayList<Food>().toString());
+//    Log.d("Favourites String", FoodListActivity);
+//
+//    Gson gson = new Gson();
+//    TypeToken<ArrayList<Movie>> movieArrayList = new TypeToken<ArrayList<Movie>>(){};
+//    ArrayList<Movie> myFavourites = gson.fromJson(favouriteMovies, movieArrayList.getType());
+//    Log.d("myFavourites", myFavourites);
+//
+//    Movie newFavourite = (Movie) getIntent().getSerializableExtra("movie");
+//    myFavourites.add(newFavourite);
+//    Log.d("myFavourites", myFavourites);
+
+
     }
 
 

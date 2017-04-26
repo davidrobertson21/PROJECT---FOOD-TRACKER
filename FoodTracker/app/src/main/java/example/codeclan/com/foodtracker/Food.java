@@ -4,7 +4,9 @@ package example.codeclan.com.foodtracker;
  * Created by user on AD 2017/4/20.
  */
 
-public class Food {
+import java.io.Serializable;
+
+public class Food implements Serializable {
 
     private FoodDayEnum day;
     private FoodMealtimeEnum mealTime;
